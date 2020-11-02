@@ -1,0 +1,331 @@
+:root {
+    --primary-color: #de8427;
+    --secondary-color: #1f3d4d;
+    --tertiary-color: #4b5784;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--secondary-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--tertiary-color);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(75, 87, 132, .5);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(75, 87, 132, 0.5);
+}
+
+section {
+    padding: 60px;
+    width: 100%;
+}
+
+/* Hero Style Start */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: #1f3d4d;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+    margin-bottom: 50px;
+}
+
+.hero h2 {
+    color: var(--primary-color);
+    justify-content: end;
+}
+
+.intro {
+    padding: 10px  
+}
+
+.summary {
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    border: 20px;
+}
+
+.section-title {
+    font-size: 35px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 0 auto 35px auto;
+}
+
+.primary-border {
+    border-color: var(--primary-color);
+}
+
+.secondary-border {
+    width: 200px;
+    height: 50px;
+    border-bottom: 3px solid var(--primary-color);
+    position: inherit;
+    transform: rotate(90deg);
+    align-self: center;
+}
+
+.projects {
+    margin: 50px auto;
+    width: auto;
+    align-self: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+.projects h2 {
+    align-self: center;
+    justify-content: center;
+}
+
+.service-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+.service-grid-container {
+    width: 100%;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.service-grid-item {
+    padding: 15px 0;
+    display: grid;
+    align-items: stretch;
+    text-align: center;
+}
+
+.service-grid-item.primary {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.service-grid-item.secondary {
+    grid-column: 3 / span 2;
+}
+
+.contact {
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+.contact h2 {
+    padding: 10px;
+    justify-content: start;
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-me div {
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0%;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+
+    .secondary-border {
+        transform: inherit;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .service-grid-container {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .service-grid-item {
+        padding: 15px 0;
+        display: grid;
+        text-align: center;
+    }
+
+    .service-grid-item.secondary {
+        grid-column: 1 / span 2;
+    }
+
+    .intro {
+        justify-content: center;
+        padding-bottom: 0%;
+    }
+    
+    .summary {
+        width: 100%;
+    }
+
+    .projects {
+        justify-content: center;
+        padding-bottom: 0%;
+        width: 100%;
+    }
+
+    .service-grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+    .contact {
+        width: 100;
+        padding-bottom: 0%;
+        justify-content: center;
+        position: relative;
+    }
+
+    .flex-column {
+        flex-flow: column wrap;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+   
+    .service-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .flex-column {
+        flex-direction: row;
+        flex: 1 auto;
+        align-self: center;
+        justify-content: space-evenly;
+    }
+
+    .secondary-border {
+        transform: inherit;
+        justify-content: center;
+        align-self: center;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .service-grid-item img {
+        object-fit: scontain;
+      }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    .secondary-border {
+        transform: inherit;
+        justify-content: center;
+        align-self: center;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .service-grid-item img {
+        object-fit: contain;
+      }
+}
+
